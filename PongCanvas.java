@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.*;
+//import java.util.*;
 
 public class PongCanvas 
     extends JPanel
@@ -85,7 +85,7 @@ public class PongCanvas
         super.paintComponent(g);
 
         g.setColor(Color.red);
-        g.fillOval(ball.getX()-4,ball.getY()-4,8,8);
+       // g.fillOval(ball.getX()-4,ball.getY()-4,8,8);
 
         g.setColor(Color.blue);
         g.fillRect(paddle1.getLeftX(),
