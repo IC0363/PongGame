@@ -2,31 +2,33 @@ public class PongBall {
     private int xCord;
     private int yCord;
     private int velocityX;
-    private int velocityY ;
-    public PongBall(int x, int y, int bX, int bY ){
+    private int velocityY;
+
+    public PongBall(int x, int y, int vX, int vY) {
         xCord = x;
         yCord = y;
-        velocityX = bX;
-        velocityY = bY;
+        velocityX = vX;
+        velocityY = vY;
     }
-    public double getX(){
+
+    public int getX() {
         return xCord;
     }
-    public double getY(){
+
+    public int getY() {
         return yCord;
     }
-    public void bounceX(){
+
+    public void bounceX() {
         velocityX = -velocityX;
     }
-    public void bounceY(){
-        velocityY = -velocityY;
 
+    public void bounceY() {
+        velocityY = -velocityY;
     }
-    public void move(){
-        xCord = velocityX;
-        yCord = velocityY;
+
+    public void move() {
+        xCord += velocityX;
+        yCord += velocityY;
     }
-    
-    
-    
 }

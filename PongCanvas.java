@@ -20,13 +20,13 @@ public class PongCanvas
         this.width = width;
         this.height = height;
 
-        ball = new PongBall(width/2, (height-40)/2 + 5, 3, 4);
+        ball = new PongBall(width / 2, height / 2, 3, 4);
 
-        paddle1 = new PongPaddle((height - 40)/2 - 20,25, 10,50);
-        paddle2 = new PongPaddle((height - 40)/2 - 20,width-35,10,50);
-        
+
+        paddle1 = new PongPaddle(10, 50, 25, (height - 40) / 2 - 20);
+        paddle2 = new PongPaddle(10, 50, width - 25, (height - 40) / 2 - 20);        
         //paddle1 = new PongPaddle(25,(height - 40)/2 - 20,10,50);
-        //paddle2 = new PongPaddle(width-35, (height - 40)/2 - 20,10,50);
+       // paddle2 = new PongPaddle(width-35, (height - 40)/2 - 20,10,50);
 
         player1 = new PongScore();
         player2 = new PongScore();
