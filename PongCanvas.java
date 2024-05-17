@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-//import java.util.*;
+import java.util.*;
 
 public class PongCanvas 
     extends JPanel
@@ -20,13 +20,14 @@ public class PongCanvas
         this.width = width;
         this.height = height;
 
-        ball = new PongBall(width / 2, height / 2, 3, 4);
-
+        ball = new PongBall(width/2, (height-40)/2 + 5, 3, 4);
 
         paddle1 = new PongPaddle(10, 50, 25, (height - 40) / 2 - 20);
-        paddle2 = new PongPaddle(10, 50, width - 25, (height - 40) / 2 - 20);        
+        paddle2 = new PongPaddle(10, 50, width - 25, (height - 40) / 2 - 20);
+
+        
         //paddle1 = new PongPaddle(25,(height - 40)/2 - 20,10,50);
-       // paddle2 = new PongPaddle(width-35, (height - 40)/2 - 20,10,50);
+        //paddle2 = new PongPaddle(width-35, (height - 40)/2 - 20,10,50);
 
         player1 = new PongScore();
         player2 = new PongScore();
@@ -85,7 +86,7 @@ public class PongCanvas
         super.paintComponent(g);
 
         g.setColor(Color.red);
-       // g.fillOval(ball.getX()-4,ball.getY()-4,8,8);
+        g.fillOval(ball.getX()-4,ball.getY()-4,8,8);
 
         g.setColor(Color.blue);
         g.fillRect(paddle1.getLeftX(),

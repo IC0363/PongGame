@@ -20,7 +20,7 @@ public class Main {
                  System.exit(0);
              }
          });
-
+         
         myFrame.setResizable(false);
         myFrame.pack();
         myFrame.setLocation(100,100);
