@@ -18,6 +18,13 @@ public class PongBall {
     public int getY() {
         return yCord;
     }
+    public int setX(int x) {
+        return xCord = x;
+    }
+
+    public int setY(int y) {
+        return yCord = y;
+    }
 
     public void bounceX() {
         velocityX = -velocityX;
